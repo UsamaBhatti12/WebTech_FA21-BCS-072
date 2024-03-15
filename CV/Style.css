@@ -1,0 +1,973 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    /* background-image: url("eat-sleep-create-repeat-inspirational-quotes-neon-pink-2560x1440-1948.jpg"); */
+    
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+/* Custom fonts picked by Usama Bhatti */
+
+@font-face {
+    font-family: "CA Segundo W00 Regular";
+    src: url('05ad99aabfdd57d11a71056af715dd15.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Geom Graphic W03 Bold";
+    src: url('Geom Graphic W03 Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "CircularSpotifyTxT-Bold";
+    src: url('112ec584bfc481ccde03444e67f8fc3f.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SF Theramin Gothic Bold V1";
+    src: url('331d10b21453a5cc2db998a14859b43b.ttf') format('truetype');
+}
+@font-face {
+    font-family: "ArcaMajora3-Bold";
+    src: url('ArcaMajora3-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: "Supreme-Bold";
+    src: url('Supreme-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url('Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url('Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "goodtime";
+  src: url('goodtime.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lunchtype22-Regular";
+  src: url('Lunchtype22-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('Montserrat-Light.ttf') format('truetype');
+}
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around */
+    font-size: 3vmin;
+    /* font-family: "CA Segundo W00 Regular"; */
+    /* font-family: "SF Theramin Gothic Bold V1"; */
+    /* font-family: "Supreme-Bold"; */
+    /* -webkit-text-stroke: 0.5px rgb(255, 255, 255); */
+    /* color: transparent; */
+    color: white;
+    /* border-left: 2px solid rgba(255, 103, 2, 0.719); */
+    margin-top: 2rem;
+}
+.intro h2{
+    font-size: 2.5rem;
+}
+
+
+.intro h1{
+    /* position: relative; */
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 4px solid ;
+    width: 100vw;
+    border-image:  linear-gradient( to bottom, red, rgba(0, 0, 0, 0) ) 1 100%; 
+    background-color: rgb(0, 0, 0);
+    background-image: url("star-wars-ahsoka-8000x4500-12833.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+      
+}
+.hero img{
+    /* border image is uncompatible with border radius */
+    border-radius: 50%;   
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 40px 15px rgb(182, 2, 2);
+    
+}
+.hero img:hover{
+    transform: Scale(1.1);
+    transition: transform 0.6s ease;
+    box-shadow: 1px 1px 40px 17px #0ff;
+    
+}
+.usama{
+  color: white;
+  z-index: 2;
+  width: 75%;
+  /* font-family:"CircularSpotifyTxT-Bold" ; */
+  font-family: "goodtime";
+  /* -webkit-text-stroke: 3px rgb(255, 123, 0); */
+  /* text-shadow: 2px 3px red; */
+
+  /* Glow animation, will use later */
+  /* text-shadow: [x-offset] [y-offset] [blur-radius] [color]; */
+  /* animation: glow 1s ease-in-out infinite alternate; */
+
+}
+.usama:hover{
+  box-shadow: 2px 2px 10px 3px red;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+
+.container{
+  background: #000000;
+  font-size: 1.9vmin;
+  /* font-family: JetBrains Mono, monospace; */
+  font-family: "ArcaMajora3-Bold";
+  height: 4vh;
+  /* 4 original */
+  /* set height for the professions string */
+  display: flex;
+ justify-content: left;
+  align-items: center;
+  color: #e4bb68;
+  width: 60%;
+  /* text-align: left; */
+}
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2vmin;
+  text-transform: uppercase;
+  animation: move 4s infinite;
+  
+}
+
+.job {
+  position: relative;
+  top: 9.5vmin;
+  /* 8.8 original */
+  /*  set  this to adjust the text sandwiched between the two boxes */
+  /* margin-left: 20vw; */
+  animation: white-out 5s infinite;
+}
+.closure{
+  color: transparent;
+}
+
+.closure::after {
+  content: '';
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  background: #050000;
+  transform: translate(-45vmin, -24.4vmin);
+}
+
+.closure::before {
+  content: '';
+  position: absolute;
+  height: 20vmin;
+  width: 40vmin;
+  background: #0a0000;
+  transform: translate(-40vmin, 5.8vmin);
+  
+}
+
+.en {
+  color: #fa8231;
+  /* box-shadow: 2px 2px 10px 3px red; */
+}
+
+.ga {
+  color: rgba(243, 2, 171, 0.753);
+}
+
+.de {
+  color: #c678dd;
+}
+
+.ui {
+  color: #a9b0bd;
+}
+
+/* Main section */
+.details{
+ border: 1.2px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 25px 4px red; 
+  /* margin-top: 1%; */
+  margin-left: 2vmin;
+  margin-right: 2vmin;
+  margin-bottom: 4rem;
+  /* border-radius: 50% ; */
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+
+}
+.intro p{
+  z-index: 3;
+    font-size: 2.2vmin;
+    text-align: justify;
+    margin-top: 4%;
+    font-family: "Montserrat-Light";
+    font-weight: bold;
+    color:rgba(15, 250, 7, 0.849);
+    
+    
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1%;
+  font-family: monospace;
+  color: white;
+  font-size: 2vmin;
+  /* background-image: url("bugatti-chiron-black-background-hypercars-5k-5283x2160-7133 (1).jpg"); */
+  background-position: center;
+  background-size: cover;
+  
+}
+main{
+  background-image: url("bugatti-chiron-black-background-hypercars-5k-5283x2160-7133 (1).jpg");
+  background-color: #00000065;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.final{
+  /* this section final covers the content and soft skills both. */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.lang{
+  border-right: 2px solid;
+  /* padding: 2%; */
+  background-color: #00000048;
+  border-radius: 5%;
+  
+  /* box-shadow: 2px 2px 10px 3px rgb(0, 255, 242); */
+}
+.tech:hover,.lang:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.edu h2{
+   color: #3494E6;
+}
+
+.year{
+  display: flex;
+  justify-content: space-between;
+}
+.ye{
+  color: rgb(255, 208, 0);
+  font-family: monospace;
+}
+.edu_text{
+  width: 100%;
+  border-bottom: 2px solid rgb(162, 1, 255);
+  margin-bottom: 2%;
+}
+/* .personal h1{
+  width: 100%;
+  border-bottom: 2px solid rgb(255, 1, 1);
+  margin-bottom: 2%;
+} */
+
+
+
+/* Adding skill icon */
+.skills h1::before{
+  /* pesudo elemnts are inline elements therefore they donot inheret certain properties */
+  /* we must convert tem to block or other layout to apply properties. */
+
+  /* set display to inline for not starting the image from new line(stay in same line with text) and block to adjust height and width
+  because inline element dont support it. */
+  display: inline-block;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url("speedometer.png");
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 15px;
+  /* margin-top: 5px; */
+  background-size: contain;
+}
+.skills h1{
+  font-family: "goodtime";
+}
+
+
+/* Skills Tab-------------------------------------------------------------------------- */
+.skills{
+  width: 25%;
+  border-right: 1px solid rgb(255, 255, 255);
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Gaming_outer{
+  width: 100%;
+  /* Taking hundered percent of 25% that is its parent element skills */
+}
+.Gaming_inner{
+  width: 10%;
+ /* The fill_web animation fills the width of the web progress bar from 10% width to 70% over a duration of 2 seconds. */
+  padding-right: 2%;
+  background-color: rgba(0, 255, 255, 0.733);
+  text-align: right;
+  animation: fill_gaming 2s 1 forwards;
+  transition: 2s ease;
+}
+.skills h2{
+  font-size: 2.2vmin;
+  font-family: "ArcaMajora3-Bold";
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+.web_outer{
+  width: 100%;
+  
+  text-align: right;
+  padding-right: 2%;
+}
+.web_inner{
+  width: 10%;
+  animation: fill_web 2s 1 forwards;
+  background-color: rgba(194, 16, 31, 0.644);
+  padding-right: 2%;
+  transition: 2s ease;
+}
+.tr_outer{
+  width: 100%;
+  text-align: right;
+}
+.tr_inner{
+  width: 10%;
+  background-color: rgba(6, 243, 65, 0.678);
+  padding-right: 2%;
+  animation: fill_tr 2s 1 forwards;
+  transition: 2s ease;
+}
+.ui_outer{
+  width: 100%;
+  text-align: right;
+}
+.ui_inner{
+  width: 10%;
+  background-color: rgba(188, 6, 243, 0.651);
+  padding-right: 2%;
+  animation: fill_ui 2s 1 forwards;
+  transition: 2s ease;
+}
+.pr_outer{
+  width: 100%;
+  text-align: right;
+}
+.pr_inner{
+  width: 10%;
+  background-color: rgba(253, 101, 0, 0.623);
+  padding-right: 2%;
+  animation: fill_pro 2s 1 forwards;
+  transition: 2s ease;
+}
+
+/* End of Skills Tab-------------------------------------------------------------------------- */
+
+/* Personal Information Tab------------------------------------------------------------------- */
+.det{
+  width: 20%;
+  border-right: 1px solid rgb(255, 255, 255);
+  background-color: #0000004f;
+  border-radius: 15px 0px 0px 15px;
+  border-left: 2px solid white;
+  padding-left: 2%;
+  
+  
+}
+.det h1{
+  font-family: "goodtime";
+}
+.det p{
+  font-family: "ArcaMajora3-Bold";
+}
+.avatar img{
+  height: 30px;
+  width: 30px;
+  margin-right: 2%;
+}
+.avatar{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 2%;
+  width: 90%;
+}
+
+    /* place icons this easy way by using img yag in html and div set to flex display as i did to number below*/
+.number img{
+  height: 30px;
+  width: 30px;
+  margin-right: 2%;
+  
+}
+.number{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.mail img{
+  height: 30px;
+  width: 30px;
+  margin-right: 5%;
+}
+.mail{
+  display: flex;
+  /* by default flex direction is row, so no need to change if you need row */
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.location img{
+  height: 30px;
+  width: 30px;
+  margin-right: 2%;
+}
+.location{
+  display: flex;
+  align-items: center;
+}
+.jj {
+  /* margin-left: 10%; */
+  margin-bottom: 5%;
+  font-size: 2.2vmin;
+}
+
+/* -------------------------------------------------------------------------------------- */
+  
+  /* Languages tab -------------------------------------------------------------------*/
+  .lang{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    overflow: hidden;
+  }
+  .lang_text img{
+    height: 40px;
+    width: 40px;
+    margin-right: 2%;
+    margin-bottom: 10%;
+  }
+  .lang_text{
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    font-family: "goodtime";
+  }
+  .lang_text h1{
+    margin-bottom: 10%;
+  }
+  .english{
+    display: flex;
+    align-items: center;
+  }
+  .english img{
+    height: 36px;
+    width: 36px;
+    margin-right: 2%;
+  }
+  .lang h2{
+    font-size: 2vmin;
+    font-family: "ArcaMajora3-Bold";
+  }
+  .lang h1{
+    font-size: 2.5vmin;
+  }
+
+  .outer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+  .a{
+    width: 50%;
+    border-radius: 30px;
+    /* border: 2px solid red; */
+    background-color: rgba(128, 128, 128, 0.507);
+    
+    
+  }
+  .b{
+    width: 70%;
+    padding-right: 5%;
+    border-radius: 30px;
+    
+    background-color: rgba(207, 15, 15, 0.829);
+    text-align: center;
+    height: 1.1vmin;
+  }
+
+  .c{
+    width: 90%;
+    padding-right: 5%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(4, 245, 205, 0.76);
+    text-align: center;
+    height: 1.1vmin;
+  }
+  .d{
+    width: 90%;
+    padding-right: 5%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 94, 1, 0.801);
+    text-align: center;
+    height: 1.1vmin;
+  }
+  .e{
+    width: 10%;
+    padding-right: 5%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(231, 7, 212, 0.808);
+    text-align: center;
+    height: 1.1vmin;
+  }
+  .f{
+    width: 1%;
+    padding-right: 5%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.795);
+    text-align: center;
+    height: 1.1vmin;
+  }
+  .b:hover,.c:hover,.d:hover,.e:hover,.f:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease;
+  }
+  
+
+
+  /* Education Tab----------------------- */
+  .edu h1{
+    font-family: "goodtime";
+  }
+  .edu h2,p{
+    font-family:"ArcaMajora3-Bold";
+  }
+  .edu_text img{
+    height: 40px;
+    width: 40px;
+    margin-right: 2%;
+  }
+  .edu_text{
+    display: flex;
+    align-items: center;
+  }
+  .edu{
+    /* border: 2px solid transparent; */
+    /* border-radius: 3%; */
+    /* background-color: #ec6ead7c; */
+    padding-right: 2%;
+    border-right: 1px solid rgb(255, 255, 255);
+    width: 20%;
+  }
+
+  .edu_inner{
+    /* padding-left: 3%;
+    padding-right: 3%; */
+    font-size: 1.8vmin;
+  }
+  .matric{
+    border-bottom: 2px solid rgb(0, 195, 255);
+    padding-bottom: 10px;
+
+  }
+  .inter{
+    border-bottom: 2px solid rgb(253, 39, 171);
+    padding-bottom: 10px;
+    padding-top: 2%;
+  }
+  .uni{
+    padding-top: 1%;
+  }
+
+/* -------------------------------------------------------------------------------- */
+/* this is for the text and icon of soft skill */
+  .soft_skills{
+    margin-top: 0.7%;
+  }
+
+  .ss_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 7%; */
+  }
+  .ss_text img{
+    height: 70px;
+    width: 70px;
+    /* margin-right: 2%; */
+  }
+  .ss_text h1{
+    color: white;
+    font-size: 3.5vmin;
+    /* font-family: "Supreme-Bold"; */
+    font-family: "ArcaMajora3-Bold";
+    line-height: 10px;
+  }
+
+  .bar{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+  }
+  /* progress bar row ------------------------------------------------------------ */
+  
+  .progress-bar{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    background: 
+    radial-gradient(closest-side, rgb(0, 0, 0) 79%, transparent 80% 100%),
+    conic-gradient(rgb(4, 235, 43) calc(var(--progress-value) * 1%), rgba(54, 223, 54, 0.411) 0);
+  animation: teamwork-progress 2s 1 forwards;
+      /* Set percentage in the conic gradient to set progress */
+      /* below layer is the conic gradient covering 3 quarters (25+25+25) of the circle with color hotpink starting from 12 o clock (0 pink)*/
+      /* upper layer is radial gradient with color (i will set this same as my background color )*/
+  }
+  
+  .progress-bar::before {
+    content: "92%";
+    font-family: monospace;
+    font-size: 2.5vmin;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: teamwork-progress 2s 1 forwards;
+  }
+
+  /* .progress-bar::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: progress 2s 1 forwards;
+  } */
+
+  .communication{
+    background: 
+      radial-gradient(closest-side, rgb(0, 0, 0) 79%, transparent 80% 100%),
+      conic-gradient(rgb(0, 238, 255) calc(var(--progress-value) * 1%) , rgba(2, 255, 221, 0.39) 0);
+      animation: com-progress 2s 1 forwards;
+      /* conic-gradient(rgb(0, 238, 255) "70%" ===replace this %value with cal function====, rgba(2, 255, 221, 0.39) 0); */
+      /* for animation of the circular bar replace the 70% above with this function 
+      calc(var(--progress-value) * 1%)   and write the percentage which the circular bar should cover in the keyframe
+      like this   
+      @keyframes teamwork-progress {
+      to { --progress-value: 92; }
+      }
+  */
+  }
+  .communication::before{
+    /* content: "70%"; */
+    /*  no need to write this % value beacuse now we are making it dynamic */
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: com-progress 2s 1 forwards;
+  }
+  
+  .adaptability{
+    background: 
+      radial-gradient(closest-side, rgb(0, 0, 0) 79%, transparent 80% 100%),
+      conic-gradient(rgb(204, 0, 255) calc(var(--progress-value) * 1%), rgba(153, 33, 143, 0.39) 0);
+      animation: adap-progress 2s 1 forwards;
+      /* this animation will correctly display the circular bar fill progress */
+      /* we are overwriting the value of the progress that is defined in the progress bar class
+      for every skill */
+  }
+  .adaptability::before{
+    /* content: "80%"; */
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: adap-progress 2s 1 forwards;
+    /* while this animation will correctly display the percentage numerical value correctly */
+  }
+
+  .leadership{
+    background: 
+      radial-gradient(closest-side, rgb(0, 0, 0) 79%, transparent 80% 100%),
+      conic-gradient(rgb(255, 166, 0) calc(var(--progress-value) * 1%), rgba(255, 217, 2, 0.39) 0);
+      animation: lead-progress 2s 1 forwards;
+  }
+  .leadership::before{
+    /* content: "95%"; */
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: lead-progress 2s 1 forwards;
+  }
+
+  .critical{
+    background: 
+      radial-gradient(closest-side, rgb(0, 0, 0) 79%, transparent 80% 100%),
+      conic-gradient(rgb(255, 0, 0) calc(var(--progress-value) * 1%), rgba(145, 36, 36, 0.473) 0);
+      animation: critical-progress 2s 1 forwards;
+  }
+  .critical::before{
+    /* content: "75%"; */
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+    animation: critical-progress 2s 1 forwards;
+  }
+
+  .first {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    color: white;
+    margin-top: 5px;
+  }
+  .first h2{
+    margin-top: 5%;
+    z-index: 1;
+    font-family: "ArcaMajora3-Bold";
+    font-size: 2vmin;
+    /* z-index 1 so that when i hover over a circular bar the text dont hide under the bar. */
+    /* Website hor heavy kr diye ke ren diye */
+  }
+
+  /* hover effect */
+  .progress-bar:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+
+  }
+  footer{
+    border-top: 1px solid white;
+    /* margin-left: 2%; */
+    /* margin-right: 2%; */
+    background-color: rgba(177, 205, 228, 0.212);
+    height: 5%;
+    margin-top: 1%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 0.5%;
+    /* background-image: url("eat-sleep-create-repeat-inspirational-quotes-neon-pink-2560x1440-1948.jpg"); */
+    background-position: center;
+    /* background-size: cover; */
+  }
+  footer p{
+    color: white;
+    font-size: 1.5vmin;
+    font-family: "goodtime";
+    margin-right: 2%;
+  }
+  span{
+    font-family: monospace;
+    color: rgb(255, 208, 0);
+  }
+
+
+/* keyframes */
+@keyframes move {
+  25% {
+    transform: translatey(-5.8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-11vmin);
+  }
+  75% {
+    transform: translatey(-16.5vmin);
+  }
+}
+
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} */
+
+@keyframes changeGradient {
+    0% {
+      border-image: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Start with red, green, blue */
+    }
+    50% {
+        border-image: linear-gradient(to right, #ff00ff, #00ffff, #ffff00); /* Change to magenta, cyan, yellow */
+    }
+    100% {
+        border-image: linear-gradient(to right, #ff0000, #00ff00, #0000ff); /* Back to red, green, blue */
+    }
+  }
+  /* Skilss animations-------------------------- */
+  @keyframes fill_gaming {
+    to {
+      width: 100%; 
+    }
+  }
+  @keyframes fill_web {
+    to {
+      width: 70%; /* Fill to the specified width */
+    }
+  }
+  @keyframes fill_tr {
+    to {
+      width: 95%; 
+    }
+  }
+  @keyframes fill_ui {
+    to {
+      width: 90%; 
+    }
+  }
+  @keyframes fill_pro {
+    to {
+      width: 50%; 
+    }
+  }
+
+/*  circular progress bar animation */
+  @property --progress-value {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes teamwork-progress {
+   to { --progress-value: 92; }
+  }
+
+  @keyframes com-progress {
+    to { --progress-value: 70; }
+   }
+
+   @keyframes adap-progress {
+    to { --progress-value: 80; }
+   }
+
+   @keyframes lead-progress {
+    to { --progress-value: 95; }
+   }
+
+   @keyframes critical-progress {
+    to { --progress-value: 75; }
+   }
+
+   
+
+  /* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+  }
+  .det, .skills, .edu{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+  .det h1,h2,p{
+    font-size: 1.8rem;
+    text-align: center;
+    
+  }
+  .lang{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+  .hero img{
+    width: 40vmin;
+    height: 40vmin;
+    box-shadow: 0px 0px 20px 10px rgb(182, 2, 2);
+
+  }
+ header{
+  background-image: none;
+  text-align: center;
+ }
+ .usama{
+  text-align: center;
+  
+ }
+ .container{
+  text-align: center;
+ }
+ main{
+  background-image: url("coastline-mountain-pass-road-morning-daylight-scenery-6016x6016-3791.jpg");
+ }
+.intro{
+  align-items: center;
+  justify-content: center;
+}
+.hero{
+  margin-top: 5%;
+  margin-left: 20vmin;
+}
+
+}
