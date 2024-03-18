@@ -1,0 +1,209 @@
+* {
+    /* universal selector * selects every element in the html document */
+    /* font-family: "CA Segundo W00 Regular"; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "CA Segundo W00 Regular";
+    src: url('05ad99aabfdd57d11a71056af715dd15.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Geom Graphic W03 Bold";
+    src: url('Geom Graphic W03 Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "CircularSpotifyTxT-Bold";
+    src: url('112ec584bfc481ccde03444e67f8fc3f.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SF Theramin Gothic Bold V1";
+    src: url('331d10b21453a5cc2db998a14859b43b.ttf') format('truetype');
+}
+
+body {
+    /* font-family: "CA Segundo W00 Regular"; */
+    /* default font size is 13px on  my computer and 16 on others. */
+    font-size: 2rem;
+    background-color: black;
+    
+    /*rem looks from root element which is the browser default */
+}
+
+/* specificity  
+    1.id 
+    2.class 
+    3.element  
+    if property is applied directly on the element it overrides the class priority
+    then the waterfall flow*/
+
+.intro {
+    margin-top: 5rem;
+    background-color: aqua;
+    color: blue;
+    font-family: "CircularSpotifyTxT-Bold";
+    /* font-family: "Geom Graphic W03 Bold"; */
+
+}
+
+.gray {
+    color: gray;
+}
+
+p {
+    /* color: rgb(19, 184, 41)  !important  to override the specificity dont use this. nuclear bomb */
+}
+
+p {
+    font-size: 1.3em;
+    /* em   font size is inhereted from the aprent element */
+    /* font-size: 39px; */
+    /* color: #df1562; */
+}
+
+.mid {
+    font-family: "CA Segundo W00 Regular";
+    background-color: black;
+    color: rgb(10, 94, 221);
+    text-align: center;
+    text-transform: uppercase;
+    border: 5px dotted red;
+    margin: 2rem;
+    padding: 4rem;
+
+
+}
+
+.mid h1 {
+    color: aliceblue;
+}
+
+.innermid {
+    border: 3px solid blueviolet;
+}
+.mid2{
+    color: azure;
+    text-align: justify;
+    font-size: 1.5rem;
+    background-color: black;
+    padding: 3em 3rem;
+    margin: 2rem;
+    /* font-family: "Geom Graphic W03 Bold"; */
+    font-family: monospace;
+    
+}
+.circle{
+    background-color: burlywood;
+    height: 20rem;     /* a circle has same height and width */
+    width: 20rem;
+    margin: 5rem auto;      /* margin auto centers it horizontally only works for margin left right*/
+    /* to center a div cet margin to auto or simply margin left right to auto */
+    border-radius: 50%;
+}
+     /* links donot inheret properties of the parent element */
+.links a{
+    display: inline-block ;   
+     text-decoration: none;   /*remove underline */
+            /* list-style-type: none;      remove bullets of the list link*/
+
+}
+.links a:hover{
+    color: aqua;
+   border: 2px solid black;
+   background-color: black;
+    transform: scale(2.1);    /*tranform will only work on block elements therefore i have set this link to inline block. */
+
+}
+
+nav a,ul{
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+nav li{
+display: inline-block;
+padding: 1.3rem 2.5rem;
+position: relative;
+}
+
+nav ul{
+ text-align: right;
+}
+                 /* leaving a little space from the right of nav bar */
+nav li:last-child{
+    /* padding-right: 10rem; */
+    
+}
+nav{
+    border-bottom: 1.7px solid rgba(128, 128, 128, 0.5);   
+    /* background-color: rgba(238, 3, 3, 0.377) */
+    /* font-family: CircularSpotifyTxT-Bold; */
+    font-family: "SF Theramin Gothic Bold V1";
+    font-size: 1.8rem;
+    border-radius: 0px 0px 30px 30px;  
+    background: linear-gradient(90deg, rgba(2,0,36,1) 7%, rgba(164,20,86,1) 56%, rgba(0,212,255,1) 89%);
+    position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1;
+   border: 2px solid red;
+    
+    
+}
+
+nav li a{
+    display: inline-block;
+   color: rgb(2, 27, 255);
+}
+        /* i want to only apply the transform by hovering over link only not on the list element. to do this link must be block or inline block to apply
+        transformation. therefore in the above line first i have set the link to display inline block. */
+nav li a:hover{       
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    /* text-decoration: overline; */
+    /* text-decoration-color: rgb(221, 7, 96); */
+    /* background: rgb(2,0,36); */
+    /* border: 1.2px solid transparent; */
+    border-radius: 10px;
+    background-color: aliceblue;
+/* background: linear-gradient(90deg, rgba(2,0,36,1) 7%, rgba(164,20,86,1) 56%, rgba(0,212,255,1) 89%); */
+}
+nav {
+    border: 2px solid wheat;
+    padding-right: 5%;
+}
+
+
+
+
+
+/* sliding image track */
+
+
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+  
+  
+
+
+

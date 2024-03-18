@@ -1,0 +1,42 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+  }
+  /* As you hover over a navigation link, the transform: scaleX(1) property
+   is applied gradually due to the transition effect specified.
+
+This results in the horizontal line appearing smoothly, starting from no width
+ and expanding to full width over the specified duration (0.3 seconds).
+ 
+ */

@@ -791,10 +791,11 @@ main{
 
   }
   footer{
-    border-top: 1px solid white;
-    /* margin-left: 2%; */
-    /* margin-right: 2%; */
-    background-color: rgba(177, 205, 228, 0.212);
+   
+    border-top: 1.2px solid rgb(255, 255, 255);
+    margin-left: 2%;
+    margin-right: 2%;
+    /* background-color: rgba(177, 205, 228, 0.212); */
     height: 5%;
     margin-top: 1%;
     display: flex;
