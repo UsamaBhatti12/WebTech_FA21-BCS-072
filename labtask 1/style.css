@@ -173,7 +173,7 @@
 
 .practice-areas{
     /* margin-top: 5vmin; */
-    background-color: #f2f2f2;
+   
     
 }
 .head1{
@@ -193,11 +193,12 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    
    
    
 }
 .inner{
-    background-color: rgb(255, 255, 255);
+    background-color: #e7e6e4;
 }
 
 .about-us {
