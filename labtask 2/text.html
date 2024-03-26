@@ -15,11 +15,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-  // Make AJAX request to JSONPlaceholder API
+  // Making AJAX request to JSONPlaceholder API
   $.get("https://jsonplaceholder.typicode.com/posts", function(data) {
-    // Handle successful response
+    
     var output = '<h2>Posts</h2>';
-    // Loop through the returned data and create HTML elements to display it
+    // displaying the returned data in the form of cards
     $.each(data, function(index, post) {
       output += '<div class="card mt-3">';
       output += '<div class="card-body">';
@@ -28,7 +28,7 @@ $(document).ready(function() {
       output += '</div>';
       output += '</div>';
     });
-    // Insert the generated HTML into the specified element
+    
     $('#api-data').html(output);
   });
 });
