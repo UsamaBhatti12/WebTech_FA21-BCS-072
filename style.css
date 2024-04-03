@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+
+header h2,button{
+    font-family: sans-serif;
+}
+.banner button {
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: rgb(77, 187, 150);
+    text-decoration: none;
+    width: 85px;
+    height: 35px;
+    
+    
+}
+.banner a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.banner{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin-top: 1rem;
+    
+}
+.group{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.navbar ul li{
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+.navbar li a{
+    text-decoration: none;
+    color: black;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.intro h2{
+    font-size: 75px;
+    text-align: center;
+    font-weight: 100px;
+}
+.child{
+    margin-top: 1rem;
+}
+.news h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
