@@ -1,0 +1,69 @@
+
+.flexbox{
+    background-color: antiquewhite;
+    width: 80%;
+    font-size: 1.7rem;
+    font-family: monospace;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 3rem;
+    /* gives gap inbetween items not on the left side of the first item or the right side of the last item  */
+   
+    
+    
+}
+
+.item1{
+    
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item2{
+    background-color: rgb(4, 163, 255);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item3{
+    background-color: rgb(252, 229, 28);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item4{
+    background-color: rgb(120, 17, 218);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item5{
+    background-color: rgb(85, 182, 128);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item6{
+    background-color: rgb(233, 41, 146);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

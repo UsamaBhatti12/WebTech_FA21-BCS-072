@@ -1,0 +1,44 @@
+
+body{
+    width: 1200px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#top{
+    margin-top: 50px;
+}
+.left{
+    width: 409px;
+}
+.top{
+
+}
+.top h1{
+    font-size: 24px;
+}
+.bottom{
+
+}
+.center{
+    width: 300px;
+}
+.right{
+    width: 300px;
+}
+
+.card{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: start;
+    
+}
+.upper h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
