@@ -15,11 +15,42 @@
       border-radius: 10px;
       box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
     }
+
+    .form-control{
+	height: 50px;
+	background: #ecf0f4;
+	border-color: transparent;
+	padding: 0 15px;
+	font-size: 16px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.form-control:focus{
+	border-color: #00bcd9;
+	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+}
+textarea.form-control{
+	height: 120px;
+	padding-top: 15px;
+	resize: none;
+}
   </style>
 </head>
 <body>
-    <%- include('partials/navbar-dark') %>
+    
   <div class="container mt-5">
+
+    <div class="container mt-5">
+      <% if (typeof success !== 'undefined' && success === 'true') { %> <!-- Check if success query parameter exists and is true -->
+        <div class="alert alert-success" role="alert">
+          Appointment submitted successfully!
+        </div>
+      <% } %>
+
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="appointment-form-container">
@@ -64,6 +95,18 @@
         </div>
       </div>
     </div>
+
+
+    <!-- take a file as input -->
+    <!-- <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">Image here</p>
+    </div> -->
+
+    
+
   </div>
+  
 </body>
 </html>

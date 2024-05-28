@@ -37,7 +37,7 @@ app.listen(PORT, () => {
 //Mongodb 
 mongoose.connect('mongodb://localhost:27017/clientreviews',)
   .then(() => console.log('Connected to MongoDB...'))
-  .catch((err) => console.error('Failed to connect to MongoDB', err));
+  .catch((err) => console.error('Failed to connect to MongoDB database', err));
 
   // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -107,16 +107,19 @@ app.get('/appointment', (req, res) => {
   res.render('appointment', { title: 'Book an appointment' });
 });
 
-// -------------------session----------------/
+// -------------------session----------------------------/
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
   secret: 'your_secret_key',
   resave: false,
   saveUninitialized: false
 }));
-const users = [
-  { id: 1, username: 'user', password: 'password' } // Replace with actual user data
-];
+
+// no need to connect to multiple databases, just create the collections in the same database  and give connection to that database
+
+
+// acquiring User model
+const User=require('./models/users');
 
 // Middleware to check if the user is authenticated
 function isAuthenticated(req, res, next) {
@@ -132,31 +135,176 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
-// Route to handle login form submission
-app.post('/login', (req, res) => {
+// Route to handle login form submission--------------
+app.post('/login', async (req, res) => {
   const { username, password } = req.body;
-  const user = users.find(user => user.username === username && user.password === password);
-  
-  if (user) {
-    req.session.userId = user.id;
-    res.redirect('/dashboard');
-  } else {
-    res.send('Invalid username or password');
+  try {
+    const user = await User.findOne({ username, password });
+    if (user) {
+      req.session.userId = user._id;
+      res.redirect('/dashboard');
+    } else {
+      res.send('Invalid username or password');
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('An error occurred');
   }
 });
 
-// Route to render a protected dashboard page
-app.get('/dashboard', isAuthenticated, (req, res) => {
-  res.send('Welcome to the dashboard!');
+// Route to render dashboard page----------------
+// Dashboard route with pagination and search
+// updated dashboard page with appointments and contact messages
+
+app.get('/dashboard', isAuthenticated, async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 10;
+  const searchQuery = req.query.search || '';
+
+  let query = {};
+  if (searchQuery) {
+    query = {
+      $or: [
+        { name: { $regex: searchQuery, $options: 'i' } },
+        { email: { $regex: searchQuery, $options: 'i' } },
+        { phone: { $regex: searchQuery, $options: 'i' } },
+        { nature: { $regex: searchQuery, $options: 'i' } }
+      ]
+    };
+  }
+
+  try {
+    const totalAppointments = await Appointment.countDocuments(query);
+    const appointments = await Appointment.find(query)
+      .skip((page - 1) * limit)
+      .limit(limit);
+
+    const totalAppointmentPages = Math.ceil(totalAppointments / limit);
+
+    const contactQuery = {};
+    if (searchQuery) {
+      contactQuery.$or = [
+        { name: { $regex: searchQuery, $options: 'i' } },
+        { email: { $regex: searchQuery, $options: 'i' } },
+        { message: { $regex: searchQuery, $options: 'i' } }
+      ];
+    }
+
+    const totalContacts = await Contact.countDocuments(contactQuery);
+    const contacts = await Contact.find(contactQuery)
+      .skip((page - 1) * limit)
+      .limit(limit);
+
+    const totalContactPages = Math.ceil(totalContacts / limit);
+
+    res.render('dashboard', {
+      appointments,
+      contacts,
+      totalAppointmentPages,
+      totalContactPages,
+      currentPage: page,
+      searchQuery,
+      totalAppointments,
+      totalContacts
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('An error occurred while fetching data.');
+  }
 });
 
-// Route to handle logout
+// delete appointments route
+
+app.post('/delete-appointments', isAuthenticated, async (req, res) => {
+  const { appointmentIds } = req.body;
+
+  try {
+    if (Array.isArray(appointmentIds) && appointmentIds.length > 0) {
+      await Appointment.deleteMany({ _id: { $in: appointmentIds } });
+      res.redirect('/dashboard');
+    } else {
+      res.status(400).send('No appointments selected for deletion.');
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('An error occurred while deleting appointments.');
+  }
+});
+
+
+
+
+
+// Route to handle logout---------------
 app.post('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
-      return res.redirect('/dashboard');
+      console.error('Error logging out', err);
+      return res.status(500).send('Internal Server Error');
     }
     res.clearCookie('connect.sid');
     res.redirect('/login');
   });
 });
+
+
+// Submit appointment form ------------------------------/
+
+const Appointment=require('./models/appointments');
+
+app.use(bodyParser.urlencoded({ extended: true }));  //middleware
+
+app.post('/book-appointment', async (req, res) => {
+  const { name, email, phone, date, time, nature, comments } = req.body;
+  
+  try {
+    const newAppointment = new Appointment({
+      name,
+      email,
+      phone,
+      date,
+      time,
+      nature,
+      comments
+    });
+
+    await newAppointment.save();
+    
+
+    setTimeout(() => {
+      res.redirect('/appointment?success=true');
+    }, 200); 
+
+    
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Your appointment cannot be booked right now.');
+  }
+});
+
+//--------cont us-----
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+const Contact = require('./models/contact');
+
+// Route to handle contact form submission
+app.post('/submit-contact', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  try {
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
+    res.render('contact', { success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('An error occurred while saving the contact message.');
+  }
+});
+
+
+
+// Route to render a protected dashboard page
+
+
