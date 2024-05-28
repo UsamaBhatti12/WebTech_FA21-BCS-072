@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Reviews</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .reviews {
+      color: #000;
+      background-color: #f3f2f2;
+    }
+    .card {
+      border-radius: .7rem;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+    }
+    .rating .fa-star {
+      color: #f4c150;
+    }
+    .form-group input,
+    .form-group textarea {
+      border-radius: .5rem;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .reviews {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+    .reviews .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .reviews h3 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .reviews .form-group input,
+    .reviews .form-group textarea {
+      border: 1px solid #ced4da;
+      padding: 10px;
+    }
+    .reviews .form-group textarea {
+      resize: none;
+    }
+    .reviews .btn {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .reviews .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .reviews .card:hover {
+      transform: translateY(-10px);
+    }
+    .reviews .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+    .reviews .rating .fa-star {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <section class="reviews" id="review">
+    <div class="container py-5">
+      <!-- Review Submission Form -->
+      <div class="row d-flex justify-content-center mb-5">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="fw-bold mb-4">Submit Your Review</h3>
+          <form id="reviewForm" action="/submit-review" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+              <input type="text" class="form-control mb-3" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control mb-3" name="title" placeholder="Your Title" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control mb-3" name="review" placeholder="Your Review" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control mb-3" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Existing Reviews -->
+      <div class="row text-center">
+        <% reviews.forEach(function(review) { %>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="card">
+              <div class="card-body py-4 mt-2">
+                <div class="d-flex justify-content-center mb-4">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
+                    class="rounded-circle shadow-1-strong" />
+                </div>
+                <h5 class="font-weight-bold"><%= review.name %></h5>
+                <h6 class="font-weight-bold my-3"><%= review.title %></h6>
+                <ul class="list-unstyled d-flex justify-content-center rating">
+                  <% for(let i = 0; i < 5; i++) { %>
+                    <% if(i < review.rating) { %>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    <% } else { %>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    <% } %>
+                  <% } %>
+                </ul>
+                <p class="mb-2">
+                  <i class="fas fa-quote-left pe-2"></i><%= review.review %>
+                </p>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function validateForm() {
+      const rating = document.forms["reviewForm"]["rating"].value;
+      if (rating < 1 || rating > 5) {
+        alert("Rating must be between 1 and 5.");
+        return false;
+      }
+      return true;
+    }
+
+    document.getElementById('reviewForm').addEventListener('input', function(event) {
+      const rating = event.target.rating.value;
+      const submitButton = event.target.querySelector('button[type="submit"]');
+      if (rating < 1 || rating > 5) {
+        event.target.rating.setCustomValidity('Rating must be between 1 and 5.');
+        submitButton.disabled = true;
+      } else {
+        event.target.rating.setCustomValidity('');
+        submitButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

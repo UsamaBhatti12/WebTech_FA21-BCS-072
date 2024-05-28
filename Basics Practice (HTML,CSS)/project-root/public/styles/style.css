@@ -1,0 +1,303 @@
+
+/* body{
+    background-color: rgb(255, 255, 255);
+} */
+#carousel {
+    overflow: hidden;
+    height: 100vmin;
+    position: relative;
+}
+
+/* this is for the gradient transition from transparent to black for the carousel */
+/* #carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, black 100%);
+    z-index: 5;
+}
+.carousel-caption {
+    z-index: 2;
+    position: relative;
+} */
+
+@font-face {
+    font-family: "CA Segundo W00 Regular";
+    src: url('/fonts/05ad99aabfdd57d11a71056af715dd15.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Geom Graphic W03 Bold";
+    src: url('/fonts/Geom Graphic W03 Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "CircularSpotifyTxT-Bold";
+    src: url('/fonts/112ec584bfc481ccde03444e67f8fc3f.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SF Theramin Gothic Bold V1";
+    src: url('/fonts/331d10b21453a5cc2db998a14859b43b.ttf') format('truetype');
+}
+@font-face {
+    font-family: "ArcaMajora3-Bold";
+    src: url('/fonts/ArcaMajora3-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: "Supreme-Bold";
+    src: url('/fonts/Supreme-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url('/fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "goodtime";
+  src: url('/fonts/goodtime.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Lunchtype22-Regular";
+  src: url('/fonts/Lunchtype22-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url('/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+
+
+.about-section{
+    background-image: url('/images/medium-shot-man-working-as-lawyer.jpg');
+     background-size: cover;
+      background-position: center;
+       height: 91.65vmin;
+}
+.navbar-nav .nav-link {
+    color: #f0eded !important; /*  custom font color */
+    font-size: 1.5rem; /*  custom font size */
+    /* font-family: "ArcaMajora3-Bold"; */
+    font-family: "Lunchtype22-Regular";
+    /* font-family: "Geom Graphic W03 Bold"; */
+    /* font-family: "Montserrat-Light"; */
+}
+.dropdown-menu {
+    background-color: #00000041; /* Your custom background color for dropdown menu */
+}
+.dropdown-menu:hover{
+    
+    color: black;
+}
+.dropdown-item:hover{
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.637);
+}
+.dropdown-item {
+    color: #fff !important; 
+}
+.dropdown-divider {
+    background-color: white ;
+    
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+}
+.carousel-caption h5 {
+    font-size: 3rem; 
+}
+.carousel-caption p {
+    font-size: 2rem; 
+}
+/* making navbar background transparent and setting it right above the carousel */
+#carousel {
+    /* position: absolute; */
+    /* position: relative; */
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background-color: black;
+    
+}
+.navbar {
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.5) !important; */
+   
+    
+}
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.black-bg {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Change the color and opacity as needed */
+}
+
+
+/* --------------------------------------------------------------- */
+
+/* apply this calss to a button for customized styling */
+.custom-button {
+    
+    color: rgb(255, 255, 255);
+    /* font-family: "ArcaMajora3-Bold";  */
+    -webkit-text-stroke: black ;
+    font-weight: 500;
+ 
+
+    
+}
+.appointment{
+    border-radius: 60px;
+    height: 40px;
+    text-align: center;
+    margin-top: .6%;
+    color: #030000;
+    font-weight: 600;
+    
+    /*CARds in the practice area-------------------  */
+}
+
+
+.heading-practice h2{
+    color: #272424;
+        font-size: 3.5rem ;
+        /* font-family: "Supreme-Bold"; */
+        font-family: "ArcaMajora3-Bold";
+        
+       
+}
+.card-text {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255); 
+    font-family: "Lato-Regular";
+    
+}
+.card-title{
+    font-size: 2rem;
+    /* font-family: "Supreme-Bold"; */
+    font-family: "ArcaMajora3-Bold";
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------------------ */
+
+.practice-areas{
+    /* margin-top: 5vmin; */
+    /* background: linear-gradient(to bottom, rgb(0, 0, 0), #ffffff); */
+
+    
+}
+.head1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vmin;
+   
+}
+.cards-row{
+    padding: 2% 8% !important;
+    
+}
+
+.inter{
+    background-image: url("/images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+   
+   
+}
+.inner{
+    background-color: #e7e6e4;
+}
+
+.about-us {
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.about-us-text {
+    padding: 20px;
+    background-color: #000000a8;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    color: #ffbb00;
+    font-family: "Supreme-Bold";
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+
+.about-us p {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: justify;
+    
+}
+
+.about-us img {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the review cards */
+.card {
+    background-color: #f3b93a; /* Set background color */
+    border: none; /* Remove border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    margin-bottom: 20px; /* Add margin bottom */
+    
+}
+
+/* Style for the "See All Reviews" button */
+.btn-primary {
+    margin-top: 20px; /* Add margin top */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;              /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;      /* Color of the scrollbar track */
+    border-radius: 10px;      /* Rounding of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;         /* Color of the scrollbar thumb */
+    border-radius: 10px;      /* Rounding of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;         /* Color of the scrollbar thumb on hover */
+}
+
+/* Appointment form---------------------- */
+
+.appointment-form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
