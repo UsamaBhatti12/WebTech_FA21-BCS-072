@@ -1,0 +1,382 @@
+
+<section>
+    <div id="carousel" class= "carousel slide carousel-fade" data-bs-ride="true" style="overflow: hidden; height: 100vmin;" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" >
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="/images/banner.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Our Fighting Is For Your Justice</h5>
+            <p>"Bhatti Law Chambers is Your Best Partner for Legal Solutions" .</p>
+            <button type="button" class="btn btn-warning btn-lg custom-button"><a style="text-decoration: none; color: black;" href="/contact">Contact Us Today</a></button>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="/images/hunters-race-MYbhN8KaaEc-unsplash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Justice delayed is justice denied.</h5>
+            <p>We Fight to have your charges withdrawn.</p>
+            <button type="button" class="btn btn-warning btn-lg">Contact Us Today</button>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="/images/amiel-gross-bOfROsjzrNs-unsplash.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Criminal Defence Lawyers</h5>
+            <p>Don't worry, we got you covered.</p>
+            <button type="button" class="btn btn-warning btn-lg">Contact Us Today</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousels" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+ 
+  
+  
+  
+ 
+
+</main>
+
+<!-- Featured Products -->
+<div class="container mt-5">
+  <h1 class="text-center">Law Books</h1>
+  <h1 class="mb-4">Featured</h1>
+  <div class="row">
+    <% products.forEach(product => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"><%= product.description %></p>
+            <p class="card-text"><strong>Price:</strong> $<%= product.price %></p>
+            <p class="card-text"><strong>Category:</strong> <%= product.category %></p>
+            <span class="badge badge-success">Featured</span>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+
+
+<section class="practice-areas" id="1">
+    <div class="head1 heading-practice">
+        <h2>Practice Areas</h2>
+    </div>
+
+  
+
+    <div class="container-fluid mt-3 practice-area-in ">
+        <div class="row  justify-content-center p-5 cards-row"  >
+          <div class="col-md-3 ">
+            <div class="card" style="border: none;">
+                <img src="/images/1.jpg" class="card-img-top" alt="Criminal Law">
+                <div class="card-body" style="background-color: rgb(61, 58, 58);">
+                    <h5 class="card-title text-center">Criminal Law</h5>
+                    <p class="card-text text-justify">Our experienced team specializes in defending individuals accused of criminal offenses.
+                      From misdemeanors to serious felonies, we provide aggressive representation.
+                      </p>
+                       <div class="text-center">
+                    <a href="#" class="btn btn-primary" style="border-radius: 50px;">Learn More</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-3">
+                <div class="card" style="border: none; color: (234, 166, 53)" >
+                    <img src="/images/2.jpg" class="card-img-top" alt="Tax Law">
+                    <div class="card-body" style="background-color: rgb(255, 209, 2);">
+                        <h5 class="card-title text-center" style="color: black;">Tax Law</h5>
+                        <p class="card-text" style="color: rgb(75, 74, 74);">Minimize tax liabilities and maximize savings with our comprehensive tax law services.
+                          Our tax experts provide strategic advice for individuals and businesses.
+                          </p>
+                        <div class="text-center">
+                          <a href="#" class="btn btn-primary" style="border-radius: 50px;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="border: none;">
+                    <img src="/images/3.jpg" class="card-img-top" alt="Intellectual Property">
+                    <div class="card-body" style="background-color: rgb(255, 136, 0);">
+                        <h5 class="card-title text-center">Intellectual Property</h5>
+                        <p class="card-text text-justify"> Whether you need
+                          assistance with patents, trademarks, or copyrights, our
+                           Advocates will help protect your valuable 
+                           creations and innovations.  gakjfkjglfdag</p>
+                           <div class="text-center">
+                            <a href="#" class="btn btn-primary" style="border-radius: 50px; ;">Learn More</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="border: none;">
+                    <img src="/images/4.jpg" class="card-img-top" alt="Administrative">
+                    <div class="card-body" style="background-color: rgb(2, 154, 255);">
+                        <h5 class="card-title text-center">Administrative Law</h5>
+                        <p class="card-text">Safeguard your innovations and creations with our specialized intellectual property services.
+                          Our team assists clients in protecting their patents, trademarks, copyrights.
+                          .</p>
+                        <div class="text-center">
+                          <a href="#" class="btn btn-primary" style="border-radius: 50px; ;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </section>
+
+ 
+  
+
+<section class="inter">
+  <div class="inner">
+    <div class="head1 heading-practice" id="lawyers">
+      <h2 style="margin-top: 3.5vmin;">Our Lawyers</h2>
+  </div>
+  <section class="team-cards" style="margin-top: 3vmin;">
+    <div class="container-lg">
+      <div class="row justify-content-center ">
+        <!-- Lawyer 1 -->
+        <div class="col-md-4 mb-5">
+          <div class="card text-center " >
+            <img src="/images/shabbirbhatti.jpeg" class="card-img-top" alt="Lawyer 1">
+            <div class="card-body " style="background-color: rgb(54, 54, 53);">
+              <h5 class="card-title ">Shabbir Hussain Bhatti</h5>
+              <p class="card-text" style="border-top: 2px solid red;">Founder</p>
+              <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lawyer 2 -->
+        <div class="col-md-4 mb-5">
+          <div class="card text-center ">
+            <img src="/images/qadri.jpeg" class="card-img-top" alt="Lawyer 2">
+            <div class="card-body" style="background-color: rgb(54, 54, 53);" >
+              <h5 class="card-title">Rana Khalid Qadri</h5>
+              <p class="card-text" style="border-top: 2px solid red;">Senior Advocate, Politician</p>
+             
+              <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lawyer 3 -->
+        <div class="col-md-4 mb-5">
+          <div class="card text-center">
+            <img src="/images/ehtisham.jpeg" class="card-img-top" alt="Lawyer 3">
+            <div class="card-body" style="background-color: rgb(54, 54, 53);">
+              <h5 class="card-title">Ehtisham Bhatti</h5>
+              <p class="card-text" style="border-top: 2px solid red;">Adv. HighCourt</p>
+              
+              <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lawyer 4 -->
+        <div class="col-md-4 mb-5">
+          <div class="card text-center">
+            <img src="/images/m.jpeg" class="card-img-top" alt="Lawyer 4">
+            <div class="card-body" style="background-color: rgb(54, 54, 53);">
+              <h5 class="card-title">Munir Bhatti</h5>
+              <p class="card-text" style="border-top: 2px solid red;">President Lahore Bar</p>
+              
+              <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lawyer 5 -->
+        <div class="col-md-4 mb-5">
+          <div class="card text-center">
+            <img src="/images/hadi.jpeg" class="card-img-top" alt="Lawyer 5">
+            <div class="card-body" style="background-color: rgb(54, 54, 53);">
+              <h5 class="card-title">Hadi Hussain Bhatti</h5>
+              <p class="card-text" style="border-top: 2px solid red;">Senior VicePresident Lhr Bar</p>
+              
+              <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="about us">
+
+  <section class="about-us">
+    <div class="container">
+        <div class="row">
+            <!-- Image Column -->
+            <div class="col-md-5">
+                <img src="/images/Flag-of-Pakistan-01-1.png" class="img-fluid" alt="About Us Image">
+            </div>
+            <!-- Text Column -->
+            <div class="col-md-7">
+                <div class="about-us-text">
+                    <h2 >About Us</h2>
+                   <p>
+                    "At Bhatti Law Firm, we are dedicated to providing our clients with exceptional
+                     legal services tailored to their individual needs. With a team of experienced 
+                     and passionate attorneys, we strive to deliver personalized solutions and achieve
+                      favorable outcomes for our clients. Our commitment to integrity, professionalism,
+                       and excellence sets us apart, and we take pride in building lasting relationships
+                        based on trust and results. Whether you're facing a complex legal issue or 
+                        seeking proactive legal advice, you can rely on Bhatti Law Firm to protect
+                         your rights and interests with skill and diligence."
+                   </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+  
+</div>
+</section>
+
+<section class="reviews" id="review">
+  <section style="color: #000; background-color: #f3f2f2;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="fw-bold mb-4">Client Reviews</h3>
+          <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+            "Explore the success stories of our satisfied clients.
+             Here are some heartfelt testimonials highlighting our
+              firm's dedication and expertise in resolving legal matters."
+          </p>
+        </div>
+      </div>
+  
+      <div class="row text-center">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card" style=" border-radius: .7rem;">
+            <div class="card-body py-4 mt-2">
+              <div class="d-flex justify-content-center mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
+                  class="rounded-circle shadow-1-strong" width="100" height="100" />
+              </div>
+              <h5 class="font-weight-bold">Shahwaiz Don</h5>
+              <h6 class="font-weight-bold my-3">Chairman baldia</h6>
+              <ul class="list-unstyled d-flex justify-content-center">
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star-half-alt fa-sm text-info"></i>
+                </li>
+              </ul>
+              <p class="mb-2">
+                <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat
+                ad velit ab hic tenetur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="card">
+            <div class="card-body py-4 mt-2">
+              <div class="d-flex justify-content-center mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp"
+                  class="rounded-circle shadow-1-strong" width="100" height="100" />
+              </div>
+              <h5 class="font-weight-bold">Hammad</h5>
+              <h6 class="font-weight-bold my-3">CR</h6>
+              <ul class="list-unstyled d-flex justify-content-center">
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+              </ul>
+              <p class="mb-2">
+                <i class="fas fa-quote-left pe-2"></i>Autem, totam debitis suscipit saepe
+                sapiente magnam officiis quaerat necessitatibus odio assumenda perferendis
+                labore laboriosam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-0">
+          <div class="card">
+            <div class="card-body py-4 mt-2">
+              <div class="d-flex justify-content-center mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp"
+                  class="rounded-circle shadow-1-strong" width="100" height="100" />
+              </div>
+              <h5 class="font-weight-bold">Chairman</h5>
+              <h6 class="font-weight-bold my-3">CHairman GDC</h6>
+              <ul class="list-unstyled d-flex justify-content-center">
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="fas fa-star fa-sm text-info"></i>
+                </li>
+                <li>
+                  <i class="far fa-star fa-sm text-info"></i>
+                </li>
+              </ul>
+              <p class="mb-2">
+                <i class="fas fa-quote-left pe-2"></i>Cras sit amet nibh libero, in gravida
+                nulla metus scelerisque ante sollicitudin commodo cras purus odio,
+                vestibulum in tempus viverra turpis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</section>
