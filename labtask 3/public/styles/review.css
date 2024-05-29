@@ -1,0 +1,96 @@
+
+    
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  /* height: 150px; */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-body {
+  background-color: #ffdd1b;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.card-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+}
+/* Form styling ---------------------------------- */
+body {
+  background-color: rgb(26, 26, 26);
+  color: white;
+}
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form-control {
+  border-radius: 20px;
+}
+.btn-primary {
+  border-radius: 20px;
+  width: 100%;
+}
+
+
+/* Scroolbar */
+::-webkit-scrollbar {
+  width: 12px;              /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;      /* Color of the scrollbar track */
+  border-radius: 10px;      /* Rounding of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;         /* Color of the scrollbar thumb */
+  border-radius: 10px;      /* Rounding of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;         /* Color of the scrollbar thumb on hover */
+}
+/* style="max-height: 400px; overflow-y: auto; */
+
+      .pagination .page-item .page-link {
+        color: #fff;
+        background-color: rgb(26, 26, 26);
+        border-color: rgb(119, 119, 119);
+      }
+      .pagination .page-item.active .page-link {
+        color: #fff;
+        background-color: rgb(26, 26, 26);
+        border-color: rgb(119, 119, 119);
+      }
+      .pagination .page-item .page-link:hover {
+        color: #0056b3;
+        background-color: #e9ecef;
+        border-color: #dee2e6;
+      }
+      .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+        background-color: #fff;
+        border-color: #dee2e6;
+      }
+   

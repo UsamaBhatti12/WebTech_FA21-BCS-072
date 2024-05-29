@@ -1,0 +1,9 @@
+<!-- <% layout('layout') %> -->
+<!-- <% layout('layout') %> tells Express to render your index.ejs content within the layout.ejs template. -->
+<!-- <% title = "Bhatti Law chambers" %> -->
+<!-- <% title = "Landing Page" %> sets the dynamic title for your landing page.
+   This value will be injected into the <%= title %> placeholder in the layout.ejs file, -->
+
+<!-- main content -->
+
+this was picked freom the index.ejs file
